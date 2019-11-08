@@ -70,14 +70,14 @@ namespace IdentityApi
             app.UseSwagger();
 
             // To show Swagger UI
-            if (env.IsDevelopment())
-            {
+            //if (env.IsDevelopment())
+            //{
                 app.UseSwaggerUI(config =>
                 {
                     config.SwaggerEndpoint("/swagger/v1/swagger.json", "Identity API");
                     config.RoutePrefix = "";
                 });
-            }
+            //}
 
             InitializeDatabase(app);
 
